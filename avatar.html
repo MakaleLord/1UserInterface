@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <!-- Exercises 
+  Exercise 1: Add an option to change the eyes of the avatar.
+  Exercise 2: Change the avatar eyes to the selected option.
+  Exercise 3: Add an option to change the avatar mouth.
+  Exercise 4: Change the mouth image as per the selected option.
+  Bonus: Show the selected avatar values checked by default.
+  
+  Homework 1: Add more images and also an option to change hairs.
+  Homework 2: Add an option for accessories like specs.
+  -->
+  <body>
+    <div class="container">
+    <h1>Create your avatar</h1>
+
+    <div class="avatar">
+      <img id="avatarFace" src="face1.png">
+      <img id="avatarEyes" src="eye1.png">
+      <img id="avatarMouth" src="mouth4.png">
+      <img id="avatarHair" src="hair2.png">
+      <img id="avatarNose" src="nose.png">
+      <img id="avatarSpecs" src="file.png">
+    </div>
+
+    <div class="options">
+      <h3>Eyes</h3>
+      <input type="radio" id='eye1' value="eye1.png" name="eyes" checked>
+      <label for='eye1'>
+        <img src='eye1.png'>
+      </label>
+      
+      <input type="radio" id='eye2' value="eye2.png" name="eyes">
+      <label for='eye2'>
+        <img src='eye2.png'>
+        </label>
+      
+      <input type="radio" id='eye3' value="eye3.png" name="eyes">
+      <label for='eye3'>
+        <img src='eye3.png'>
+        </label>
+       
+      <input type="radio" id='eye4' value="eye4.png" name="eyes">
+      <label for='eye4'>
+        <img src='eye4.png'>
+        </label>
+      
+      <input type="radio" id='eye5' value="eye5.png" name="eyes">
+      <label for='eye5'>
+        <img src='eye5.png'>
+        </label>
+      
+      <h3>Mouth</h3>
+      <input type="radio" id='mouth1' value="mouth1.png" name="mouth" checked>
+      <label for='mouth1'>
+        <img src='mouth1.png'>
+      </label>
+      
+      <input type="radio" id='mouth2' value="mouth2.png" name="mouth">
+      <label for='mouth2'>
+        <img src='mouth2.png'>
+      </label>
+      
+      <input type="radio" id='mouth3' value="mouth3.png" name="mouth">
+      <label for='mouth3'>
+        <img src='mouth3.png'>
+      </label>
+      
+      <input type="radio" id='mouth4' value="mouth4.png" name="mouth">
+      <label for='mouth4'>
+        <img src='mouth4.png'>
+      </label>
+      
+      <input type="radio" id='mouth5' value="mouth5.png" name="mouth">
+      <label for='mouth5'>
+        <img src='mouth5.png'>
+      </label>
+      
+      <h3>Hair</h3>
+      <input type="radio" id='hair1' value="hair1.png" name="hair" checked>
+      <label for='hair1'>
+        <img src='hair1.png'>
+      </label>
+      
+      <input type="radio" id='hair2' value="hair2.png" name="hair">
+      <label for='hair2'>
+        <img src='hair2.png'>
+      </label>
+      
+      <input type="radio" id='hair3' value="hair3.png" name="hair">
+      <label for='hair3'>
+        <img src='hair3.png'>
+      </label>
+      
+      <h3>Specs</h3>
+      <input type="radio" id='specs1' value="specs1.png" name="specs" checked>
+      <label for='specs1'>
+        <img src='specs1.png'>
+      </label>
+      
+      <input type="radio" id='specs2' value="specs2.png" name="specs">
+      <label for='specs2'>
+        <img src='specs2.png'>
+      </label>
+      
+      <input type="radio" id='specs3' value="specs3.png" name="specs">
+      <label for='specs3'>
+        <img src='specs3.png'>
+      </label>
+      
+      <input type="radio" id='specs4' value="specs4.png" name="specs">
+      <label for='specs4'>
+        <img src='specs4.png'>
+      </label>
+      
+      <input type="radio" id='specs5' value="specs5.png" name="specs">
+      <label for='specs5'>
+        <img src='specs5.png'>
+      </label>
+    </div>
+    </div> 
+
+    <script>
+      function update() {
+        var eye = $('input[name="eyes"]:checked').val();
+        $('#avatarEyes').attr('src', eye);
+        var mouth = $('input[name="mouth"]:checked').val();
+        $('#avatarMouth').attr('src', mouth);
+        var hair = $('input[name="hair"]:checked').val();
+        $('#avatarHair').attr('src', hair);
+        var specs = $('input[name="specs"]:checked').val();
+        $('#avatarSpecs').attr('src', specs);
+      }
+      $('.options').click(update);
+    </script>
+  </body>
+</html><script type="application/javascript" src="/share.js"></script>
